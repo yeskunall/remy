@@ -1,0 +1,9 @@
+.env
+.env.*
+
+/.data/
+/dist/
+/.nuxt/
+/.output/
+/.sqld/
+/node_modules/
