@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { AuthState } from "@kinde-oss/kinde-typescript-sdk"
+
 const { keyCount: totalMemories = 0, status } = await useGetObjects()
 </script>
 
@@ -58,8 +60,8 @@ const { keyCount: totalMemories = 0, status } = await useGetObjects()
           class="px-4 font-semibold"
         >Unlock {{ totalMemories }}+ memories</span>
         <UiAvatar
-          :name="$auth.user.name"
-          :picture="$auth.user.picture"
+          :name="($auth.user as AuthState['user']).name"
+          :picture="($auth.user as AuthState['user']).picture"
         />
       </NuxtLink>
     </div>

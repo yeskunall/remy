@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { AuthState } from "@kinde-oss/kinde-typescript-sdk"
+
 import Toolbar from "primevue/toolbar"
 
 const { keyCount, status } = await useGetObjects()
@@ -61,8 +63,8 @@ const { keyCount, status } = await useGetObjects()
             v-motion
             v-motion-pop-visible-once
             :delay="400"
-            :name="$auth.user.name"
-            :picture="$auth.user.picture"
+            :name="($auth.user as AuthState['user']).name"
+            :picture="($auth.user as AuthState['user']).picture"
           />
           <NuxtLink
             v-if="$auth.loggedIn"
