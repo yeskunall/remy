@@ -2,7 +2,7 @@
 import "@unocss/reset/tailwind.css"
 import "~/assets/global.css"
 
-const { siteUrl } = useAppConfig()
+const { public: { siteUrl } } = useRuntimeConfig()
 
 useHead({
   link: [
