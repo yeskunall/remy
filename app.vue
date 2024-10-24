@@ -68,8 +68,21 @@ useSeoMeta({
     <main>
       <NuxtPage />
     </main>
-    <footer class="flex flex-col max-w-xl py-12 w-full mx-auto">
+    <footer class="flex flex-col max-w-xl items-center py-12 gap-8 w-full mx-auto">
+      <div class="order-first text-center">
+        <p class="text-sm text-gray-5 font-medium tracking-tight">
+          Remy is currently built using the following:
+        </p>
+      </div>
       <LazyStackGrid />
+      <div class="flex items-center text-sm gap-2">
+        <NuxtLink
+          to="https://github.com/yeskunall/remy"
+          class="text-gray-5 hover:text-gray-9 leading-none inline-flex items-center gap-1 font-medium transition-colors ease-in-out duration-300"
+        >
+          Source available on GitHub
+        </NuxtLink>
+      </div>
     </footer>
   </NuxtLayout>
 </template>
